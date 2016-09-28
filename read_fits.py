@@ -3,6 +3,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def plot_distribution(arr):
+    """
+    This function plots the value contained in the given
+    array against the associated (1D)index
+    """
     n = np.linspace(0,arr.size, arr.size)
     plt.plot(n,arr.flatten())
     plt.show()
@@ -87,9 +91,6 @@ plt.imshow(image[:,:,2],
         origin='lower')
 plt.show()
 
-# Showing RGB-image (Not sure how to adjust the colors)
-plt.imshow(image[400:-50,400:-100,:]) 
-        vmin=[-0.08,-0.07,-0.02], 
-        vmax=[0.08,0.07,0.02], 
-        origin='lower')
+# Showing RGB-image (Not sure how to adjust the colors (argh!))
+plt.imshow(image[400:-50,400:-100,:],origin='lower') 
 plt.show()
